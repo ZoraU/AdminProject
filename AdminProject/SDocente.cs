@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdminProject
 {
-    public class SDocente
+    public struct SDocente
     {
     }
 }
