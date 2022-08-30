@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdminProject
 {
-    public struct SEstudiante
+    public struct SStudent
     {
         public void AddEstudiante()
         {
@@ -45,7 +45,7 @@ namespace AdminProject
         int Id;
         double[] Ratings = new double[3];
 
-        public SEstudiante()
+        public SStudent()
         {
         }
     }

@@ -10,8 +10,8 @@ namespace AdminProject
     {
         static void Main(string[] args)
         {
-            SEstudiante sEstudiante_1 = new SEstudiante();
-            SEstudiante sEstudiante_2 = new SEstudiante();
+            SStudent sEstudiante_1 = new SStudent();
+            SStudent sEstudiante_2 = new SStudent();
 
             sEstudiante_1.AddEstudiante();
             Console.WriteLine();
