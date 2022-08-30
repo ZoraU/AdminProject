@@ -10,14 +10,7 @@ namespace AdminProject
     {
         static void Main(string[] args)
         {
-            CStudetn oStudent = new CStudetn();
-            CProfessor oProfessor = new CProfessor();
 
-            oStudent.SetInfo();
-            oProfessor.SetInfo();
-            Console.WriteLine();
-            oStudent.GetInfo();
-            oProfessor.GetInfo();
         }
     }
 }

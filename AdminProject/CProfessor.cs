@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdminProject
 {
-    internal class CProfessor : CPerson
+    public class CProfessor : CPerson
     {
         public override void GetInfo()
         {

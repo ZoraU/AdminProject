@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdminProject
 {
-    public class CStudetn : CPerson
+    public class CStudent : CPerson
     {
         public override void GetInfo()
         {
@@ -18,7 +18,7 @@ namespace AdminProject
 
         public override void SetInfo()
         {
-            Console.WriteLine("\n<-- Personal Information -->");
+            Console.WriteLine("\n<-- Student Information -->");
             Console.Write("Your Name: ");
             FirstName = Console.ReadLine();
             Console.Write("Your Last Name: ");
