@@ -10,16 +10,17 @@ namespace AdminProject
     {
         static void Main(string[] args)
         {
-            SStudent sEstudiante_1 = new SStudent();
-            SStudent sEstudiante_2 = new SStudent();
+            // Test: Testing the struct student
+            //SStudent sEstudiante_1 = new SStudent();
+            //SStudent sEstudiante_2 = new SStudent();
 
-            sEstudiante_1.AddEstudiante();
-            Console.WriteLine();
-            sEstudiante_2.AddEstudiante();
-            Console.WriteLine();
+            //sEstudiante_1.AddEstudiante();
+            //Console.WriteLine();
+            //sEstudiante_2.AddEstudiante();
+            //Console.WriteLine();
 
-            sEstudiante_1.getInfoEstudiante();
-            sEstudiante_2.getInfoEstudiante();
+            //sEstudiante_1.getInfoEstudiante();
+            //sEstudiante_2.getInfoEstudiante();
         }
     }
 }
