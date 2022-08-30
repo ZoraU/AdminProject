@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdminProject
 {
-    public class Program
+    public class SEstudiante
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
