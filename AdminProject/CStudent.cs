@@ -28,7 +28,7 @@ namespace AdminProject
             Console.Write("Your Id: ");
             Id = (int)Convert.ToInt64(Console.ReadLine());
             // Method for completing the information
-            SetInfoStudent();
+            SetInfoStudent(); //
         }
 
         private void SetInfoStudent()

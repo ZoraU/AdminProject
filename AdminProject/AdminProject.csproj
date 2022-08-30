@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="CPerson.cs" />
     <Compile Include="CProfessor.cs" />
-    <Compile Include="CStudetn.cs" />
+    <Compile Include="CStudent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
