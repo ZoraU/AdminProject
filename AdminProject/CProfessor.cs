@@ -18,7 +18,7 @@ namespace AdminProject
 
         public override void SetInfo()
         {
-            Console.WriteLine("\n<-- Personal Information -->");
+            Console.WriteLine("\n<-- Professor Information -->");
             Console.Write("Your Name: ");
             FirstName = Console.ReadLine();
             Console.Write("Your Last Name: ");
