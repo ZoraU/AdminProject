@@ -8,12 +8,13 @@ namespace AdminProject
 {
     public class CStudent : CPerson
     {
-        public override void GetInfo()
+        public override string ToString()
         {
-            Console.WriteLine($"Name: {FirstName} {LastName} | "
+            string message = string.Format($"Name: {FirstName} {LastName} | "
                             + $"Degree: °{_degree} | "
                             + $"Modality: {_modality} | "
                             + $"Age: {Age}");
+            return message;
         }
 
         public override void SetInfo()
