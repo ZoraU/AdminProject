@@ -19,7 +19,9 @@ namespace AdminProject
 
         public override void SetInfo()
         {
-            Console.WriteLine("\n<-- Student Information -->");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("<--- Student Information --->");
+            Console.WriteLine("-----------------------------\n");
             Console.Write("Your Name: ");
             FirstName = Console.ReadLine();
             Console.Write("Your Last Name: ");
@@ -33,8 +35,10 @@ namespace AdminProject
         }
 
         private void SetInfoStudent()
-        { 
-            Console.WriteLine("\n<-- Complete student information -->");
+        {
+            Console.WriteLine("\n--------------------------------------");
+            Console.WriteLine("<--- Complete student information --->");
+            Console.WriteLine("--------------------------------------\n");
             Console.Write("Grade currently in school: ");
             _degree = Convert.ToInt32(Console.ReadLine());
             Console.Write("Modality of study: ");
