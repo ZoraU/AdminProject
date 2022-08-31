@@ -19,7 +19,9 @@ namespace AdminProject
 
         public override void SetInfo()
         {
-            Console.WriteLine("\n<-- Professor Information -->");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine("<---- Professor Information ---->");
+            Console.WriteLine("---------------------------------\n");
             Console.Write("Your Name: ");
             FirstName = Console.ReadLine();
             Console.Write("Your Last Name: ");
@@ -34,7 +36,9 @@ namespace AdminProject
 
         private void SetInfoProfessor()
         {
-            Console.WriteLine("\n<-- Complete professor information -->");
+            Console.WriteLine("\n------------------------------------------");
+            Console.WriteLine("<---- Complete professor information ---->");
+            Console.WriteLine("------------------------------------------\n");
             Console.Write("Years of experience in the sector: ");
             _yearsExperience = Convert.ToInt32(Console.ReadLine());
             Console.Write("Sector in which you work: ");

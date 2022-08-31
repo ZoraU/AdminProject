@@ -25,19 +25,32 @@ namespace AdminProject
     {
         public void AgregarMiembro(T mbr)
         {
-            staff.Insert(counter, mbr);
-            counter++;
+            staff.Add(mbr);
         }
 
         public void MostrarMiembros()
         {
             foreach(T mbr in staff)
             {
-                Console.WriteLine(mbr.ToString());
+                Console.WriteLine(mbr);
             }
+        }
+
+        public void MostrarIndicesMiembros()
+        {
+            int removeCounter = 0;
+            foreach(T mbr in staff)
+            {
+                Console.WriteLine($"| {removeCounter} | {mbr}");
+                removeCounter++;
+            }
+        }
+
+        public void EliminarMiembro(int m)
+        {
+            staff.RemoveAt(m);
         }
         
         List<T> staff = new List<T>();
-        int counter = 0;
     }
 }
