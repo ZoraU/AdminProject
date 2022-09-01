@@ -64,12 +64,12 @@ namespace AdminProject
 
         // <---------------------------> // <---------------------------> // <---------------------------> //
 
-        // Nota: Este método implementa los métodos de la colección "List<T>" para eliminar elementos
+        // Nota: Este método implementa los métodos de la clase genérica "Organization<T>" para eliminar elementos
         static void DeleteInterfaceLogic<T>(Organization<T> org)
         {
             int numKey;
             DeleteInterface(org);
-
+                
             do
             {
                 Console.WriteLine(" - Press the [ 1 ] key to delete personnel."
