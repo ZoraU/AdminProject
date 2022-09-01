@@ -21,36 +21,44 @@ namespace AdminProject
         private int _age;
     }
 
-    public class SchoolOrganization<T>
+    // Nota: Esta clase genérica implementa la colección List<T> para administrar las instancias de tipo
+    // "CStudent" y "CProfessor".
+
+    public class Organization<T>
     {
-        public void AgregarMiembro(T mbr)
+        public void AddMember(T mbr)
         {
-            staff.Add(mbr);
+            _staff.Add(mbr);
         }
 
-        public void MostrarMiembros()
+        public void ShowMembers()
         {
-            foreach(T mbr in staff)
+            foreach(T mbr in _staff)
             {
                 Console.WriteLine(mbr);
             }
         }
 
-        public void MostrarIndicesMiembros()
+        public void ShowMemberIndexes()
         {
             int removeCounter = 0;
-            foreach(T mbr in staff)
+            foreach(T mbr in _staff)
             {
                 Console.WriteLine($"| {removeCounter} | {mbr}");
                 removeCounter++;
             }
         }
 
-        public void EliminarMiembro(int m)
+        public void RemoveMember(int mbr)
         {
-            staff.RemoveAt(m);
+            _staff.RemoveAt(mbr);
         }
-        
-        List<T> staff = new List<T>();
+
+        public void RemoveAllMembers()
+        {
+            _staff.Clear();
+        }
+
+        private List<T> _staff = new();
     }
 }
