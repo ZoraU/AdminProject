@@ -72,9 +72,9 @@ namespace AdminProject
                 
             do
             {
-                Console.WriteLine(" - Press the [ 1 ] key to delete personnel."
-                              + "\n - Press the [ 2 ] key to delete all personnel."
-                              + "\n - Press the [ 0 ] key to exit the view.");
+                Console.WriteLine("\n - Press the [ 1 ] key to delete personnel."
+                                + "\n - Press the [ 2 ] key to delete all personnel."
+                                + "\n - Press the [ 0 ] key to exit the view.");
                 
                 Console.Write("\nEnter the key --> ");
                 numKey = Convert.ToInt32(Console.ReadLine());
