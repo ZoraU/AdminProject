@@ -27,9 +27,9 @@ namespace AdminProject
             Console.Write("Your Last Name: ");
             LastName = Console.ReadLine();
             Console.Write("Your Age: ");
-            NumericException(Age);
+            Age = Convert.ToInt64(Console.ReadLine());
             Console.Write("Your Id: ");
-            NumericException(Id);
+            Id = Convert.ToInt64(Console.ReadLine());
             // Method for completing the information
             SetInfoProfessor();
         }
@@ -40,12 +40,12 @@ namespace AdminProject
             Console.WriteLine("<---- Complete professor information ---->");
             Console.WriteLine("------------------------------------------\n");
             Console.Write("Years of experience in the sector: ");
-            NumericException(_yearsExperience);
+            _yearsExperience = Convert.ToInt64(Console.ReadLine());
             Console.Write("Sector in which you work: ");
             _fieldExperience = Console.ReadLine();
         }
 
         private string _fieldExperience;
-        private int _yearsExperience = 0;
+        private long _yearsExperience;
     }
 }
