@@ -56,7 +56,6 @@ namespace AdminProject
         //        }
         //    // TODO: Ivestigar cómo validar un tipo string
         //    } while ();
-        //}
     }
 
     // Nota: Esta clase genérica implementa la colección List<T> para administrar las instancias de tipo
