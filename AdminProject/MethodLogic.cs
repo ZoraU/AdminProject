@@ -8,7 +8,7 @@ namespace AdminProject
 {
     public partial class Program
     {
-        static void StudentInterfaceLogic(int temporal, Organization<CStudent> org)
+        private static void StudentInterfaceLogic(int temporal, Organization<CStudent> org)
         {
             // Nota: Si se cumple está condición se creara un nuevo objeto del tipo
             if (temporal == 1)
@@ -38,7 +38,7 @@ namespace AdminProject
             }
         }
 
-        static void ProfessorInterfaceLogic(int temporal, Organization<CProfessor> org)
+        private static void ProfessorInterfaceLogic(int temporal, Organization<CProfessor> org)
         {
             // Nota: Si se cumple está condición se creara un nuevo objeto del tipo
             if (temporal == 1)
@@ -71,7 +71,7 @@ namespace AdminProject
         // <---------------------------> // <---------------------------> // <---------------------------> //
 
         // Nota: Este método implementa los métodos de la clase genérica "Organization<T>" para eliminar elementos
-        static void DeleteInterfaceLogic<T>(Organization<T> org)
+        private static void DeleteInterfaceLogic<T>(Organization<T> org)
         {
             int numKey;
             // Nota: Llamado al header de la interfaz de eliminación
@@ -107,13 +107,32 @@ namespace AdminProject
         }
 
         // Nota: Esté método se recarga cada vez que se ejecuta una acción en el método "DeleteInterfaceLogic"
-        static void DeleteInterface<T>(Organization<T> org)
+        private static void DeleteInterface<T>(Organization<T> org)
         {
             Console.Clear();
             Console.WriteLine("----------------------------------");
             Console.WriteLine("<-------- Delete Persons -------->");
             Console.WriteLine("----------------------------------\n");
             org.ShowMemberIndexes();
+        }
+
+        // Nota: Esté método capta las excepciones de la clase "Program", esto se refiere a errores que
+        // pueden surgir al moverse por las interfaces "CProfessor" o "CStudent"
+        private static void NumericException(ref int num)
+        {
+            do
+            {
+                try
+                {
+                    num = int.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    num = -1;
+                    Console.WriteLine("\nOpps! Invalid data type");
+                    Console.Write("Try again --> ");
+                }
+            } while (num == -1);
         }
     }
 }

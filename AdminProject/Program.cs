@@ -12,13 +12,13 @@ namespace AdminProject
         {
             Organization<CStudent> orgStudent = new Organization<CStudent>();
             Organization<CProfessor> orgProfessor = new Organization<CProfessor>();
-            int numKey;
+            int numKey = -1;
 
             do
             {
                 InitialInterfaceMenu();
                 Console.Write("\nEnter the key --> ");
-                numKey = int.Parse(Console.ReadLine());
+                NumericException(ref numKey);
 
                 if (numKey == 1) StudentInterfaceMenu(orgStudent);
                 if (numKey == 2) ProfessorInterfaceMenu(orgProfessor);
@@ -26,10 +26,12 @@ namespace AdminProject
             } while (numKey != 0);
 
             Console.Clear();
-            Console.WriteLine("\nThank you for using our services ;)\n");
+            Console.WriteLine("\n-----------------------------------");
+            Console.WriteLine("Thank you for using our services ;)");
+            Console.WriteLine("-----------------------------------\n");
 
         }
-        static void InitialInterfaceMenu()
+        private static void InitialInterfaceMenu()
         {
             Console.Clear();
             var message = string.Format("!Welcome to the school staff platform!");
@@ -40,9 +42,9 @@ namespace AdminProject
                             + "\n2. Press key [ 2 ] to add a teacher / view the list of teachers."
                             + "\n3. Press [ 0 ] key to exit the program.");
         }
-        static void StudentInterfaceMenu(Organization<CStudent> orgStudent)
+        private static void StudentInterfaceMenu(Organization<CStudent> orgStudent)
         {
-            int temporal;
+            int temporal = -1;
 
             do
             {
@@ -57,14 +59,14 @@ namespace AdminProject
 
                 // <---- Interface Logic ---->
                 Console.Write("\nEnter the key --> ");
-                temporal = int.Parse(Console.ReadLine());
+                NumericException(ref temporal);
                 StudentInterfaceLogic(temporal, orgStudent);
 
             } while (temporal != 0);
         }
-        static void ProfessorInterfaceMenu(Organization<CProfessor> orgProfessor)
+        private static void ProfessorInterfaceMenu(Organization<CProfessor> orgProfessor)
         {
-            int temporal;
+            int temporal = -1;
 
             do
             {
@@ -79,7 +81,7 @@ namespace AdminProject
                 
                 // <---- Interface Logic ---->
                 Console.Write("\nEnter the key --> ");
-                temporal = int.Parse(Console.ReadLine());
+                NumericException(ref temporal);
                 ProfessorInterfaceLogic(temporal, orgProfessor);
             
             } while (temporal != 0);
