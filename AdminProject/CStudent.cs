@@ -24,13 +24,13 @@ namespace AdminProject
             Console.WriteLine("<---- Student Information ---->");
             Console.WriteLine("-------------------------------\n");
             Console.Write("Your Name: ");
-            FirstName = Console.ReadLine();
+            StringException(ref FirstName);
             Console.Write("Your Last Name: ");
-            LastName = Console.ReadLine();
+            StringException(ref LastName);
             Console.Write("Your Age: ");
-            Age = Convert.ToInt64(Console.ReadLine());
+            NumericException(ref Age);
             Console.Write("Your Id: ");
-            Id = Convert.ToInt64(Console.ReadLine());
+            NumericException(ref Id);
             // Method for completing the information
             SetInfoStudent();
         }
@@ -41,9 +41,9 @@ namespace AdminProject
             Console.WriteLine("<---- Complete student information ---->");
             Console.WriteLine("----------------------------------------\n");
             Console.Write("Grade currently in school: ");
-            _degree = Convert.ToInt64(Console.ReadLine());
+            NumericException(ref _degree);
             Console.Write("Modality of study: ");
-            _modality = Console.ReadLine();
+            StringException(ref _modality);
         }
 
         private string _modality;

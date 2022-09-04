@@ -23,13 +23,13 @@ namespace AdminProject
             Console.WriteLine("<---- Professor Information ---->");
             Console.WriteLine("---------------------------------\n");
             Console.Write("Your Name: ");
-            FirstName = Console.ReadLine();
+            StringException(ref FirstName);
             Console.Write("Your Last Name: ");
-            LastName = Console.ReadLine();
+            StringException(ref LastName);
             Console.Write("Your Age: ");
-            Age = Convert.ToInt64(Console.ReadLine());
+            NumericException(ref Age);
             Console.Write("Your Id: ");
-            Id = Convert.ToInt64(Console.ReadLine());
+            NumericException(ref Id);
             // Method for completing the information
             SetInfoProfessor();
         }

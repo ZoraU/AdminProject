@@ -18,7 +18,7 @@ namespace AdminProject
             {
                 InitialInterfaceMenu();
                 Console.Write("\nEnter the key --> ");
-                numKey = Convert.ToInt32(Console.ReadLine());
+                numKey = int.Parse(Console.ReadLine());
 
                 if (numKey == 1) StudentInterfaceMenu(orgStudent);
                 if (numKey == 2) ProfessorInterfaceMenu(orgProfessor);
@@ -57,7 +57,7 @@ namespace AdminProject
 
                 // <---- Interface Logic ---->
                 Console.Write("\nEnter the key --> ");
-                temporal = Convert.ToInt32(Console.ReadLine());
+                temporal = int.Parse(Console.ReadLine());
                 StudentInterfaceLogic(temporal, orgStudent);
 
             } while (temporal != 0);
@@ -79,7 +79,7 @@ namespace AdminProject
                 
                 // <---- Interface Logic ---->
                 Console.Write("\nEnter the key --> ");
-                temporal = Convert.ToInt32(Console.ReadLine());
+                temporal = int.Parse(Console.ReadLine());
                 ProfessorInterfaceLogic(temporal, orgProfessor);
             
             } while (temporal != 0);

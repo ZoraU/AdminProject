@@ -9,12 +9,52 @@ namespace AdminProject
 {
     public abstract partial class CPerson
     {
-        protected string FirstName { get; set; } 
-        protected string LastName { get; set; }
-        protected long Id { get; set; }
-        protected long Age { get; set; }
+        protected string FirstName;
+        protected string LastName;
+        protected long Id;
+        protected long Age;
 
         public abstract void SetInfo();
+    }
+
+    // Nota: en esta sección se captarán los errores de datos al llenar los campos de información
+
+    public abstract partial class CPerson
+    {
+        protected static void NumericException(ref long num)
+        {
+            do
+            {
+                try
+                {
+                    num = long.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    num = -1;
+                    Console.WriteLine("\nOpps! Invalid data type");
+                    Console.Write("Try again --> ");
+                }
+            } while (num == -1);
+        }
+        protected static void StringException(ref string str)
+        {
+            do
+            {
+                str = Console.ReadLine();
+                IEnumerable<char> stringQuery = from c in str where Char.IsDigit(c) select c;
+                foreach (char c in stringQuery)
+                {
+                    if (c >= '0' && c <= '9')
+                    {
+                        Console.WriteLine("\nOpps! Invalid data type");
+                        Console.Write("Try again --> ");
+                        str = null;
+                        break;
+                    }
+                }
+            } while (str == null);
+        }
     }
 
     // Nota: Esta clase genérica implementa la colección List<T> para administrar las instancias de tipo
