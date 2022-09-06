@@ -30,6 +30,10 @@ namespace AdminProject
             Console.WriteLine("Thank you for using our services ;)");
             Console.WriteLine("-----------------------------------\n");
 
+            Console.WriteLine("Credits: ");
+            Console.WriteLine("-> Deyner Torrado");
+            Console.WriteLine("-> @deynercta\n");
+
         }
         private static void InitialInterfaceMenu()
         {
