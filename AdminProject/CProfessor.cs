@@ -40,9 +40,9 @@ namespace AdminProject
             Console.WriteLine("<---- Complete professor information ---->");
             Console.WriteLine("------------------------------------------\n");
             Console.Write("Years of experience in the sector: ");
-            _yearsExperience = Convert.ToInt64(Console.ReadLine());
+            NumericException(ref _yearsExperience);
             Console.Write("Sector in which you work: ");
-            _fieldExperience = Console.ReadLine();
+            StringException(ref _fieldExperience);
         }
 
         private string _fieldExperience;
